@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="NIKNAZ" id="CREATE_SEQ_CURRENCY_EXCHANGE">
+        <createSequence sequenceName="SEQ_CURRENCY_EXCHANGE"/>
+    </changeSet>
+
+    <changeSet author="NIKNAZ" id="CREATE_CURRENCY_EXCHANGE_TABLE">
+
+        <createTable tableName="TBL_CURRENCY_EXCHANGE">
+            <column autoIncrement="true" name="ID" type="NUMBER(19,0)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="CURRENCY_FROM" type="VARCHAR(255)"/>
+            <column name="CURRENCY_TO" type="VARCHAR(255)"/>
+            <column name="CONVERSION_MULTIPLE" type="NUMBER(19,2)"/>
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

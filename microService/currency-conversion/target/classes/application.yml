@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: currency-conversion
+
+  profiles:
+    active: Local
+
+server:
+  port: 8100

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: currency-exchange
+
+  profiles:
+    active: Local
+
+  liquibase:
+    change-log: classpath:/db/liquibase-master.xml
+
+server:
+  port: 8000
+
+logging:
+  level:
+    liquibase: INFO

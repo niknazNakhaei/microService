@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: api-gateway
+
+  profiles:
+    active: Local
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+          lower-case-service-id: true
+
+server:
+  port: 8765
